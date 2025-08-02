@@ -1,0 +1,12 @@
+This Sign Up system consists of the following - 
+1. An HTML File with a signup form which has the following fields- Name, Email, Mobile number, Address, Password and Retype Password. Page has minimal styling using bootstrap css and styles are stored in style.css. The scripts  for input validation  are stored in script.js.
+
+2. Content of script.js- 
+This file contains validation rules written in angular. The validation rules are- passwords should contain a lowercase, an uppercase and a special character. Both the Password and Retype Password fields should match. Mobile number field should contain numbers only and should be ten digits.  None of the fields can be blank. Password to be encrypted using md5 and then this signup data be passed on to api.php which will return a success or failed response. 
+
+3. An api.php where all the data from the signup form is stored in the database, and upon successful insertion in the database, a success message is returned. Otherwise, in case of failure, a failure message is returned in the form of json.
+
+4. SQL Code for creating the table which will store signup data. 
+
+** Since Angular only permits communication with database through an api, a simple PHP api has been used in this project. 
+For secure communication of password through the api, the password has been encrypted using md5 algorithm. 
